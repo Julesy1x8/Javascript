@@ -15,24 +15,22 @@
  *
  */
 
-
+/*
 for (let number = 5; number < 1000; number+= 5) {
     console.log(number);
 }
-
+*/
 
 for (let number = 100; number > -101; number--) {
     console.log(number);
 }
 
-for (let repeat = 0; repeat < 2500;) {
-    for (let number = 0; number += 3;) {
-        console.log(number);
-        number--;
-        console.log(number);
-    }
+/*
+let number = 0;
+for (let repeat = 0; repeat < 2500; repeat++) {
+    number += 3;
+    console.log(number);
+    number -= 1;
+    console.log(number);
 }
-for (let i = 0; i < 10; i++) {
-    console.log(i);
-}
-/* hello world */
+*/
