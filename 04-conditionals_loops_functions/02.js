@@ -21,11 +21,11 @@ for (let number = 5; number < 1000; number+= 5) {
 }
 */
 
-for (let number = 100; number > -101; number--) {
+for (let number = 10; number > -10; number--) {
     console.log(number);
 }
 
-/*
+
 let number = 0;
 for (let repeat = 0; repeat < 2500; repeat++) {
     number += 3;
@@ -33,4 +33,4 @@ for (let repeat = 0; repeat < 2500; repeat++) {
     number -= 1;
     console.log(number);
 }
-*/
+
