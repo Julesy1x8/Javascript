@@ -15,7 +15,7 @@
  *
  */
 
-/*
+
 for (let number = 5; number < 1000; number+= 5) {
     console.log(number);
 }
@@ -33,4 +33,4 @@ for (let repeat = 0; repeat < 2500; repeat++) {
     console.log(number);
 }
 
-*/
+
