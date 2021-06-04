@@ -22,29 +22,31 @@
 
 // Write your code here:
 function KtoC(k) {
-    
+    return k - 273.15;
 }
-
-
-
-
-
-
+function CtoK(c) {
+    return c + 274.15;
+}
+function FtoK(f) {
+    return f + 255.927778;
+}
+function KtoF(k) {
+    return (k - 273.15) * 9 / 5 + 32;
+}274.15
 
 
 // Do not modify anything below this line
+console.log("272 K is " + KtoC(272) + " C");
+console.log("0 C is " + CtoK(0) + " K");
+console.log("30 C is " + FtoK(30) + " K");
+console.log("100 K is " + KtoF(100) + " F");
 
-console.log(KtoC(272));
-console.log(CtoK(0));
-console.log(FtoK(30));
-console.log(KtoF(100));
+// console.log(pythagoras(10, 20));
+// console.log(pythagoras(30, 100));
+// console.log(pythagoras(20, 50));
 
-console.log(pythagoras(10, 20));
-console.log(pythagoras(30, 100));
-console.log(pythagoras(20, 50));
+// console.log(MToKm(100));
+// console.log(KmToM(25));
 
-console.log(MToKm(100));
-console.log(KmToM(25));
-
-console.log(inchToCm(10));
-console.log(CmToInch(425));
+// console.log(inchToCm(10));
+// console.log(CmToInch(425));
