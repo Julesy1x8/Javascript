@@ -17,3 +17,40 @@
  *    function that takes an array as an argument and returns the sum. Use this
  *    function to log the sum of the two arrays of odd and even numbers.
  */
+
+// let furniture = [
+//     "bed",
+//     "exercise bike",
+//     "chair"
+// ]
+// let drawersOrBoxes = [
+//     [
+//         "clothes",
+//         "secret candy stash"
+//     ],
+//     [
+//         "pencil",
+//         "art"
+//     ],
+//     [
+//         "books"
+//     ]
+// ]
+// for (let i = 0; i < drawersOrBoxes.length; i++) {
+//     for (let x = 0;x < drawersOrBoxes[i].length; x++) {
+//         console.log(drawersOrBoxes[i][x]);
+//     }
+// }
+// let numbers = [];
+// for (let i = 1; i < 101; i++) {
+//     numbers.push(i)
+// }
+// let sum = numbers[1];
+// for (let i = 1; i < numbers.length; i++) {
+//     sum += numbers[i];
+// } console.log(sum);
+
+let numbers2 = [];
+for (let i = 1; 1 < 100; i++) {
+    numbers2.push(Math.floor((Math.random() * 100) + 1));
+} console.log(numbers2);

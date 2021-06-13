@@ -32,7 +32,24 @@ function FtoK(f) {
 }
 function KtoF(k) {
     return (k - 273.15) * 9 / 5 + 32;
-}274.15
+}
+function MToKm(M) {
+    return M / 1000;
+}
+function KmToM(Km) {
+    return Km * 1000;
+}
+function inchToCm(inch) {
+    return inch * 2.54;
+}
+function CmToInch(Cm) {
+    return Cm * 0.39370078740157;
+}
+function pythagoras(a,b) {
+    let value = (a * a) + (b * b);
+    let answer = Math.sqrt(value);
+    return answer;
+}
 
 
 // Do not modify anything below this line
@@ -41,12 +58,12 @@ console.log("0 C is " + CtoK(0) + " K");
 console.log("30 C is " + FtoK(30) + " K");
 console.log("100 K is " + KtoF(100) + " F");
 
-// console.log(pythagoras(10, 20));
-// console.log(pythagoras(30, 100));
-// console.log(pythagoras(20, 50));
+console.log(pythagoras(10, 20));
+console.log(pythagoras(30, 100));
+console.log(pythagoras(20, 50));
 
-// console.log(MToKm(100));
-// console.log(KmToM(25));
+console.log("100 meters is "+MToKm(100)+" kilometers");
+console.log("25 kilimeters is "+KmToM(25)+" meters");
 
-// console.log(inchToCm(10));
-// console.log(CmToInch(425));
+console.log("10 inches is "+inchToCm(10)+" centimeters");
+console.log("425 centimeters is "+CmToInch(425)+" inches");
