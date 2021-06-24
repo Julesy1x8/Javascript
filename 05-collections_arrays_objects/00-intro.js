@@ -12,3 +12,5 @@ for (let index = 0; index < temperatures.length; index++) {
     console.log(f + "F is " + c + "C")
 }
 console.log("test");
+
+
