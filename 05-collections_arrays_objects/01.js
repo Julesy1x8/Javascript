@@ -41,16 +41,45 @@
 //         console.log(drawersOrBoxes[i][x]);
 //     }
 // }
-// let numbers = [];
-// for (let i = 1; i < 101; i++) {
-//     numbers.push(i)
-// }
+let numbers = [];
+for (let i = 1; i < 101; i++) {
+    numbers.push(i)
+}
 // let sum = numbers[1];
 // for (let i = 1; i < numbers.length; i++) {
 //     sum += numbers[i];
 // } console.log(sum);
 
 let numbers2 = [];
-for (let i = 1; 1 < 100; i++) {
+for (let i = 1; i < 101; i++) {
     numbers2.push(Math.floor((Math.random() * 100) + 1));
 } console.log(numbers2);
+
+
+let oddNumbers = [];
+let evenNumbers = [];
+for (let i = 1; i < numbers2.length; i++) {
+    if (numbers2[i] % 2 == 0) {
+        evenNumbers.push(numbers2[i]);
+    } else {
+        oddNumbers.push(numbers2[i]);
+    }
+}
+let sum = numbers[1];
+function sum() {
+    for (let i = 1; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+} console.log(sum);
+
+let sum = numbers[1];
+for (let i = 1; i < numbers.length; i++) {
+    sum += numbers[i];
+} console.log(sum);
+
+function sumLog(numbers) {
+    for (let i = 1; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    return sum;
+} console.log(sumLog());
