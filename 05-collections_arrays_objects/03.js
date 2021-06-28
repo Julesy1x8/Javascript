@@ -70,3 +70,53 @@ stores =  [
     [ '4003IN', 'Target', 'IN', 'North', 'Attica' ],
     [ '4003KY', 'Target', 'KY', 'North', 'Ashland' ]
 ]
+//challenge 1
+for (let i = 1; i < stores.length; i++) {
+    console.log(stores[i][5]);
+}
+
+
+
+// challenge 2 not working
+// for (let i = 0; i < stores.length; i++) {
+//     for (let x = 1; x < stores[i].length; x++) {
+//         if (stores[i][3] == 'CA') {
+//             console.log(stores[i][2]);
+//         }
+//     }
+// }
+
+// challenge 3 not working
+// for (let i = 0; i < stores.length; i++) {
+//     if (stores[i][2] == 'Target') {
+//         console.log(stores[i][2]);
+//     }
+// }
+
+let ApplianceDirect = 0;
+let Target = 0;
+let KMart = 0;
+let CircuitCity = 0;
+let BestBuy = 0;
+
+for (let i = 0; i < stores.length; i++) {
+
+    if (stores[i][2] == 'Appliance Direct') {
+        ApplianceDirect++;
+    } else if (stores[i][2] == 'Target') {
+        Target++;
+    } else if (stores[i][2] == 'K-Mart') {
+        KMart++;
+    } else if (stores[i][2] == 'Best Buy') {
+        BestBuy++;
+    }
+
+    let storeNumbers = {
+        applianceDirect: ApplianceDirect,
+        target: Target,
+        kMart: KMart,
+        circuitCity: CircuitCity,
+        bestBuy: BestBuy
+    }
+    
+}
