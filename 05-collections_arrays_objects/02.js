@@ -15,6 +15,19 @@ lengths = [
  * You don't have to reference other JavaScript files or anything, just copy and
  * paste the code you wrote previously into this file.
  */
-
+let inchLengths = [];
+function CmToInch(Cm) {
+    for (let i = 1; i < lengths.length; i++) {
+        inchLengths.push(lengths[i] * 0.39370078740157);
+    }
+}
+let sum = 0
+for (let i = 0; i < lengths.length; i++) {
+    if (sum == 0) {
+        sum += lengths[i];
+    } else {
+        sum = sum / lengths.length
+    }
+}
 
 
