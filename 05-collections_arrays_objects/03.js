@@ -119,4 +119,10 @@ for (let i = 0; i < stores.length; i++) {
         bestBuy: BestBuy
     }
     
-}
+}   
+
+console.log(storeNumbers.applianceDirect);
+console.log(storeNumbers.target);
+console.log(storeNumbers.kMart);
+console.log(storeNumbers.circuitCity);
+console.log(storeNumbers.bestBuy);
