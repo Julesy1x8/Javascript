@@ -22,3 +22,4 @@
 
 let avgTempInCity = getAvgTemp("Vancouver", "C");
 console.log(avgTempInCity);
+

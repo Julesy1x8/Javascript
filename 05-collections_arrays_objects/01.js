@@ -66,13 +66,13 @@ for (let i = 1; i < numbers2.length; i++) {
     }
 }
 let sum = numbers[1];
-function sum() {
+function functionSum() {
     for (let i = 1; i < numbers.length; i++) {
-        sum += numbers[i];
+        return sum += numbers[i];
     }
-} console.log(sum);
+} console.log(functionSum);
 
-let sum = numbers[1];
+sum = numbers[1];
 for (let i = 1; i < numbers.length; i++) {
     sum += numbers[i];
 } console.log(sum);
@@ -82,4 +82,4 @@ function sumLog(numbers) {
         sum += numbers[i];
     }
     return sum;
-} console.log(sumLog());
+} console.log(sumLog(numbers));

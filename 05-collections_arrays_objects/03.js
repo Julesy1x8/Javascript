@@ -71,58 +71,60 @@ stores =  [
     [ '4003KY', 'Target', 'KY', 'North', 'Ashland' ]
 ]
 //challenge 1
+console.log('challenge 1');
 for (let i = 1; i < stores.length; i++) {
-    console.log(stores[i][5]);
+    console.log(stores[i][4]);
 }
 
 
 
 // challenge 2 not working
-// for (let i = 0; i < stores.length; i++) {
-//     for (let x = 1; x < stores[i].length; x++) {
-//         if (stores[i][3] == 'CA') {
-//             console.log(stores[i][2]);
-//         }
-//     }
-// }
+console.log('chalenge 2');
+for (let i = 0; i < stores.length; i++) {
+    for (let x = 0; x < stores[i].length; x++) {
+        if (stores[i][2] == 'CA') {
+            console.log(stores[i][1]);
+        }
+    }
+}
 
 // challenge 3 not working
-// for (let i = 0; i < stores.length; i++) {
-//     if (stores[i][2] == 'Target') {
-//         console.log(stores[i][2]);
-//     }
-// }
+console.log('challenge 3');
+let numOfTargets = 0;
+for (let i = 0; i < stores.length; i++) {
+    if (stores[i][1] == 'Target') {
+        numOfTargets++;
+    }
+} console.log(`there are ${numOfTargets} targets`);
 
-let ApplianceDirect = 0;
-let Target = 0;
-let KMart = 0;
-let CircuitCity = 0;
-let BestBuy = 0;
+// challenge 4 not working
+console.log('chalenge 4');
+let storeNums = {
+    applianceDirect: 0,
+    target: 0,
+    kMart: 0,
+    circuitCity: 0,
+    bestBuy: 0
+}
 
 for (let i = 0; i < stores.length; i++) {
 
-    if (stores[i][2] == 'Appliance Direct') {
-        ApplianceDirect++;
-    } else if (stores[i][2] == 'Target') {
-        Target++;
-    } else if (stores[i][2] == 'K-Mart') {
-        KMart++;
-    } else if (stores[i][2] == 'Best Buy') {
-        BestBuy++;
-    }
-
-    let storeNumbers = {
-        applianceDirect: ApplianceDirect,
-        target: Target,
-        kMart: KMart,
-        circuitCity: CircuitCity,
-        bestBuy: BestBuy
+    if (stores[i][1] == 'Appliance Direct') {
+        storeNums.applianceDirect++;
+    } else if (stores[i][1] == 'Target') {
+        storeNums.target++;
+    } else if (stores[i][1] == 'K-Mart') {
+        storeNums.kMart++;
+    } else if (stores[i][1] == 'Best Buy') {
+        storeNums.bestBuy++;
+    } else if (stores[i][1] == 'Circuit City') {
+        storeNums.circuitCity++;
     }
     
-}   
+}
 
-console.log(storeNumbers.applianceDirect);
-console.log(storeNumbers.target);
-console.log(storeNumbers.kMart);
-console.log(storeNumbers.circuitCity);
-console.log(storeNumbers.bestBuy);
+console.log(`there are ${storeNums.applianceDirect} Applience Direct`);
+console.log(`there are ${storeNums.target} Targets`);
+console.log(`there are ${storeNums.kMart} KMarts`);
+console.log(`there are ${storeNums.circuitCity} Circuit Cities`);
+console.log(`there are ${storeNums.bestBuy} BestBuys`);

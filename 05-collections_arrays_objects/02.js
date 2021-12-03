@@ -21,13 +21,11 @@ function CmToInch(Cm) {
         inchLengths.push(lengths[i] * 0.39370078740157);
     }
 }
-let sum = 0
+let sum2 = 0
 for (let i = 0; i < lengths.length; i++) {
-    if (sum == 0) {
-        sum += lengths[i];
+    if (sum2 == 0) {
+        sum2 += lengths[i];
     } else {
-        sum = sum / lengths.length
+        sum2 = sum2 / lengths.length;
     }
-}
-
-
+} console.log(sum2);
