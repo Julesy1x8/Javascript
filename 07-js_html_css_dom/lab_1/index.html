@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script>  
-      console.log(window.getComputedStyle(document.documentElement.getPropertyValue('--color-mode-background')));
+    <script> 
+    let i = 1
+    function darkMode() {
+      $(function(){
+        if (i == 1) {
+          $('.body').css('background', 'black');
+          $('.body').css('color', 'white');
+          i = 2;
+          console.log('dark');
+        } else {
+          $('.body').css('background', 'white');
+          $('.body').css('color', 'black');
+          i = 1;
+          console.log('light');
+        } 
+      });
+    }
+      
+      function textBigger() {
+        $(function(){
+          let size = $('.body').css('font-size');
+          const myArray = size.split('p');
+          let sizeNumber = parseInt(myArray[0]) * 1.15;
+          let sizeString = sizeNumber + 'px'
+          console.log(size);
+          $('.body').css('font-size', sizeString);
+        });
+      }
+      function textSmaller() {
+        let size = $('.body').css('font-size');
+          const myArray = size.split('p');
+          let sizeNumber = parseInt(myArray[0]) * 0.95;
+          let sizeString = sizeNumber + 'px'
+          console.log(size);
+          $('.body').css('font-size', sizeString);
+      }
     </script>
   </head>
   <body class="body"> 
-    <header>
-      <h1>bergbucks ink&trade;</h1>
+    <header class="body">
+      <h1 id="id">bergbucks ink&trade;</h1>
     </header>
-    <main>
+    <main class="body">
       <div id="main">
         <div id="div1">
           <h1>lorem ipsum</h1>
@@ -22,7 +57,11 @@
           <h3>lorem ipsum</h3>
           <p>Arcu non sodales neque sodales ut etiam.<br> Ut tristique et egestas quis ipsum suspendisse ultrices.<br>At quis risus sed vulputate odio ut enim blandit.<br> Mattis aliquam faucibus purus in massa tempor nec.<br> Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Pellentesque elit eget gravida cum sociis.
 Dignissim diam quis enim lobortis</p>
-          <button onclick="darkMode()">darkmode</button>
+          <div class="flex">
+            <button onclick="darkMode()" class="flex">darkmode</button>
+            <button onclick="textBigger()" class="flex">+</button>
+            <button onclick="textSmaller()" class="flex">-</button>
+          </div>
         </div>
         <div id="div2">
           <h1>lorem ipsum</h1>
@@ -36,7 +75,7 @@ Dignissim diam quis enim lobortis</p>
         </div>
       </div>
     </main>
-    <center>
+    <center class="body">
       <footer>
         <h5>2021 - 2022 bergbucks ink &copy;; </h5>
       </footer>

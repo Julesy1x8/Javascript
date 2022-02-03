@@ -1,0 +1,9 @@
+.block {
+    display: block;
+}
+.inline {
+    display: inline;
+}
+.column {
+    flex-direction: column;
+}

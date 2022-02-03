@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .flex-item-left {
+            background-color: #f1f1f1;
+            padding: 10px;
+            flex: 50%;
+        }
+
+        .flex-item-logo {
+            background-color: #ff0000;
+            padding: 10px;
+            flex: 5%;
+        }
+        
+        .flex-item-right {
+            background-color: dodgerblue;
+            padding: 10px;
+            flex: 50%;
+        }
+        
+        /* Responsive layout - makes a one column-layout instead of a two-column layout */
+        @media (max-width: 800px) {
+            .flex-item-right, .flex-item-left {
+            flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item-logo">logo</div>
+        <div class="flex-item-right">bergbucks ink converter</div>
+    </div>
+
+    <h1>hdghsdhfsjgdj</h1>
+
+<div class="flex-container">
+  <div class="flex-item-left">
+      <div> input field</div>
+      <div>
+          
+        <label for="cars">Choose a car:</label>
+
+        <select id="cars">
+          <option value="celsius">celsius</option>
+          <option value="kelvin">kelvin</option>
+          <option value="miles">miles</option>
+          <option value="kilometers">kilometers</option>
+          <option value="feat">feat</option>
+        </select>
+    
+    </div>
+  </div>
+  <div class="flex-item-right">2</div>
+</div>
+
+</body>
+</html>
+

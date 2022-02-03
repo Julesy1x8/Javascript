@@ -1,0 +1,28 @@
+#wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+#header {
+    background-color: red;
+    height: 10%;
+    width: 100%;
+}
+#main {
+    background-color: blue;
+    height: 90%;
+    width: 100%;
+    display: inline;
+}
+#convertFrom {
+    background-color: green;
+    height: 70%;
+    width: 50%;
+    display: inline;
+}
+#convertTo {
+    background-color: yellow;
+    height: 70%;
+    width: 50%;
+    display: inline;
+}
