@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="jquery-3.5.1.min.js"></script>
     <style>
         * {
             box-sizing: border-box;
@@ -37,6 +38,13 @@
             flex: 100%;
             }
         }
+        #input {
+            display: block;
+        }
+        #output {
+            background-color: white;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -48,25 +56,68 @@
     <h1>hdghsdhfsjgdj</h1>
 
 <div class="flex-container">
-  <div class="flex-item-left">
-      <div> input field</div>
-      <div>
-          
-        <label for="cars">Choose a car:</label>
+    <div class="flex-item-right">
+        <div>
+            <center>
+                <input type="text" id="input">
 
-        <select id="cars">
-          <option value="celsius">celsius</option>
-          <option value="kelvin">kelvin</option>
-          <option value="miles">miles</option>
-          <option value="kilometers">kilometers</option>
-          <option value="feat">feat</option>
-        </select>
-    
+                <label>Choose a conversion:</label>
+
+                <select id="conversion">
+                <option>kelvin to celsius</option>
+                <option>celsius to kelvin</option>
+                <option>farenheight to kelvin</option>
+                <option>kelvin to farenheight</option>
+                <option>meters to kilometers</option>
+                <option>kilometers to meters</option>
+                <option>inch to centimeter</option>
+                <option>centimeter to inch</option>
+                </select>
+                <button onclick="output()">convert</button>
+
+                <p id="result"></p>
+            </center>
+        </div>
     </div>
-  </div>
-  <div class="flex-item-right">2</div>
 </div>
+<script>
+    // variables
+    let cM = null;
 
+
+    function conversionMethod(e, j) {
+        console.log('convert')
+        console.log(e);
+        if (e == 'kelvin to celsius') {
+            return j - 273.15;
+        } else if (e == 'celsius to kelvin') {
+            return j + 273.15;
+        } else if (e == 'farenheight to kelvin') {
+            return j + 255.927778;
+        } else if (e == 'kelvin to farenheight') {
+            return j (k - 273.15) * 9 / 5 + 32;
+        } else if (e == 'meters to kilometers') {
+            return j / 1000;
+        } else if (e == 'kilometers to meters') {
+            return j * 1000;
+        } else if (e == 'inch to centimeter') {
+            return j * 2.54;
+        } else if (e == 'centimeter to inch') {
+            return j * 0.39370078740157;
+        }
+    }
+    function output() {
+        let i = document.getElementById('conversion').value;
+        let a = document.getElementById('input').value;
+        a = parseInt(a);
+        let b = conversionMethod(i, a);
+        
+        console.log(i);
+        console.log(b);
+        document.getElementById('result').innerHTML = b
+    }
+    
+</script>
 </body>
 </html>
 
