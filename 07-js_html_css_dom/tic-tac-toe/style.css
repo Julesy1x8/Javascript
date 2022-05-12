@@ -1,0 +1,19 @@
+#board {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.square {
+  border: black solid 4px;
+  flex-basis: 30%;
+  height: 33.333%;
+  width: 33.333%;
+  resize:none;
+}
+.svg1:hover * {
+  stroke: black;
+}
+.square:hover {
+  background: red;
+}
