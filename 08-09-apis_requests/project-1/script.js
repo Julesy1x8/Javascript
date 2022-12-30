@@ -178,9 +178,7 @@ async function startPage() {
 
   console.log(data);
 
-//  myMap();
   sunriseSunset();
-//  timeBasedStylings(getLocalTime(data.time_zone.current_time));
   domManipulation();
 
   timeBasedStylings();
