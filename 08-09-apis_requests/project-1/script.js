@@ -104,24 +104,6 @@ function getLocalTime(e){
   console.log(time);
   return timeString;
 }
-
-function timeBasedStylings(time,sunrise,sunset) {
-  let sunriseTimeRange = [];
-  sunriseTimeRange[0] = sunrise.parseInt - 0.5;
-  sunriseTimeRange[1] = sunrise.parseInt + 0.5;
-
-  sunsetTimeRange[0] = sunset.parseInt - 0.5;
-  sunsetTimeRange[1] = sunset.parseInt + 0.5;
-
-  if (time > sunriseTimeRange[0] && time < sunriseTimeRange[1]) {
-
-  } else if (time > sunsetTimeRange[0] && time < sunsetTimeRange[1]) {
-
-  } else {
-
-  }
-}
-
 function loadPageInfo() {
   let ipData = fetch(
     'https://api.ipdata.co?api-key=0f90c45c7995b24d076e84153c84084cf70898cf543e341ea697af26'
@@ -137,6 +119,48 @@ function loadPageInfo() {
   })
   .catch("loadPageInfo has failed");
   return ipData
+}
+function spacePeopleInSpace() {}
+fetch(
+    "http://api.open-notify.org/astros.json"
+).then(res => res.json())
+.then(data => {
+    console.log(data.number);
+    document.getElementById('spacePeopleInSpace').innerHTML = data.number;
+})
+.catch("spacePeopleInSpace has failed");
+
+function ISScordinates() {}
+fetch(
+        "http://api.open-notify.org/iss-now.json"
+        ).then(res => res.json())
+.then(data => {
+    document.getElementById('ISSlatitude').innerHTML = data.iss_position.latitude;
+    document.getElementById('ISSlongitude').innerHTML = data.iss_position.longitude;
+
+    ISSmap(data.iss_position.latitude, data.iss_position.longitude)
+})
+.catch("ISScordinates has failed");
+
+function ISSmap(lat, lng) {
+    var map = L.map('ISSmap').setView([lat,lng], 13);
+
+    map.setZoom(1);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 13,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var ISSicon = L.icon({
+        iconUrl: 'http://open-notify.org/Open-Notify-API/map/ISSIcon.png',
+
+    iconSize:     [50, 30], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+
+    L.marker([51.5, -0.09], {icon: ISSicon}).addTo(map);
 }
 
 function domManipulation() {
@@ -174,7 +198,8 @@ async function startPage() {
 
   await loadPageInfo();
 
-
+  spacePeopleInSpace();
+  ISScordinates();
 
   console.log(data);
 

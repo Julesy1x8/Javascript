@@ -8,9 +8,15 @@ body {
 .center {
   margin: 15px;
 }
-.sides {
+.left-side {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.right-side {
+  position: relative;
+  left: 864px;
+  top: -434px;
+/*  top: -400px;*/
 }
 #flex-container {
   display: flex;
@@ -40,4 +46,8 @@ body {
   width: 100%;
   /* The width is the width of the web page */
   margin-top: 15px;
+}
+#ISSmap {
+  height: 400px;
+  width: 400px;
 }
